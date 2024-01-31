@@ -3,7 +3,7 @@
 // 3. Create a button to delete an image from the gallary 👍
 // 4. Create a button to delete all images from the gallary with a modal to confirm the action using in the middle of the screen (CSS) not the default confirm function 👍
 // 5. Create a button to edit an image from the gallary
-// 6. When you click on an image it opens a slider modal with the image and its name
+// 6. When you click on an image it opens a slider modal with the image and its name 👍
 // 7. Create a button to close the slider or close the slider when pressing outside the slider or pressing the escape button 👍
 // 8. Create a button to change the slider image to the next image using (CSS animation)
 // 9. Create a button to change the slider image to the previous image (CSS animation)
@@ -127,9 +127,9 @@ deleteAllBtn.addEventListener('click', function(){
       });
     
       
-      //close slider on click screen ////////////////////////////////////////////////////////
+      //close slider on click screen
       window.addEventListener('click', function(e){
-        if(e.target == slider){
+        if(e.target == modalBack){
           slider.style.display = 'none';
           modalBack.style.display = 'none';
         }
