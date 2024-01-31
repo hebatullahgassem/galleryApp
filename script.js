@@ -23,6 +23,8 @@ const nextBtn = document.querySelector('.next');
 
 let imgContainer;
 let removeBtn;
+let img;
+let currentImgIndex = 0;
 
 //modal function
 deleteAllBtn.addEventListener('click', function(){
@@ -51,12 +53,12 @@ deleteAllBtn.addEventListener('click', function(){
 });
 
 //loop to display all images
-  for(let i = 0; i< imgs.length; i++){
+for(let i = 0; i< imgs.length; i++){
 
     imageDisplay();
   
     //image and name elements 
-    const img = document.createElement('img');
+    img = document.createElement('img');
     const fileName = document.createElement('p');
     const imageName = imgs[i].split('/').pop().split('.').shift();
   
@@ -73,7 +75,6 @@ deleteAllBtn.addEventListener('click', function(){
 
     //slider modal 
     img.addEventListener('click', sliderDisplaying);
-
     function sliderDisplaying(){
       //show slider
       slider.style.display = 'block';
@@ -135,7 +136,8 @@ deleteAllBtn.addEventListener('click', function(){
         }
       });
     }
-  }
+}
+
 
 //delete one image function
 function deleteImage(event){
