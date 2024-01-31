@@ -24,7 +24,6 @@ const nextBtn = document.querySelector('.next');
 let imgContainer;
 let removeBtn;
 let img;
-let currentImgIndex = 0;
 
 //modal function
 deleteAllBtn.addEventListener('click', function(){
@@ -75,67 +74,66 @@ for(let i = 0; i< imgs.length; i++){
 
     //slider modal 
     img.addEventListener('click', sliderDisplaying);
-    function sliderDisplaying(){
-      //show slider
-      slider.style.display = 'block';
-    
-      //background style
-      modalBack.style.display = 'block';
-    
-      //display image
-      const sliderImage = document.createElement('img');
-      sliderImage.src = this.src;
-      sliderImage.className = 'slider-images';
-      slider.appendChild(sliderImage);
-    
-      //display name
-      const fileName = document.createElement('p');
-      const imageName = imgs[i].split('/').pop().split('.').shift();
-      fileName.textContent = imageName;
-      fileName.classList = 'sliderImageName';
-      slider.appendChild(fileName);
-    
-      //previous image
-      prevBtn.addEventListener('click', function(){
-        if(i>0){
-          i--;
-          sliderImage.src = imgs[i].src;
-        }
-      });
-    
-      //next image
-      nextBtn.addEventListener('click', function(){
-        if(i< imgs.length -1){
-          i++;
-          sliderImage.src = imgs[i].src;
-        }
-      });
-    
-      //close slider options
-      //close slider on click x button
-      x.addEventListener('click', function(){
-        slider.style.display = 'none';
-        modalBack.style.display = 'none';
-        modalBack.style.display = 'none';
-      });
-    
-      //close slider on click esc button
-      document.addEventListener('keydown', function(e){
-        if(e.key === 'Escape'){
+    function sliderDisplaying(){ 
+        //show slider
+        slider.style.display = 'block';
+
+        //background style
+        modalBack.style.display = 'block';
+
+        //display image
+        const sliderImage = document.createElement('img');
+        sliderImage.src = this.src;
+        sliderImage.className = 'slider-images';
+        slider.appendChild(sliderImage);
+
+        //display name
+        const fileName = document.createElement('p');
+        const imageName = imgs[i].split('/').pop().split('.').shift();
+        fileName.textContent = imageName;
+        fileName.classList = 'sliderImageName';
+        slider.appendChild(fileName);
+
+        //previous image
+        prevBtn.addEventListener('click', function(){
+          if(i>0){
+            i--;
+            sliderImage.src = imgs[i];
+          }
+        });
+
+        //next image
+        nextBtn.addEventListener('click', function(){
+          if(i< imgs.length -1){
+            i++;
+            sliderImage.src = imgs[i];
+          }
+        });
+
+        //close slider options
+        //close slider on click x button
+        x.addEventListener('click', function(){
           slider.style.display = 'none';
           modalBack.style.display = 'none';
-        }
-      });
-    
-      
-      //close slider on click screen
-      window.addEventListener('click', function(e){
-        if(e.target == modalBack){
-          slider.style.display = 'none';
           modalBack.style.display = 'none';
-        }
-      });
-    }
+        });
+
+        //close slider on click esc button
+        document.addEventListener('keydown', function(e){
+          if(e.key === 'Escape'){
+            slider.style.display = 'none';
+            modalBack.style.display = 'none';
+          }
+        });
+        
+        //close slider on click screen
+        window.addEventListener('click', function(e){
+          if(e.target == modalBack){
+            slider.style.display = 'none';
+            modalBack.style.display = 'none';
+          }
+        });
+      }
 }
 
 
