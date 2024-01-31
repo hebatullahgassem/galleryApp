@@ -4,7 +4,7 @@ body{
 }
 
 .inputContainer{
-  margin-left: 500px;
+  margin-left: 36%;
   margin-top: 20px;
 }
 
@@ -33,7 +33,7 @@ input{
   font-size: 15px;
   padding: 10px 20px;
   text-align: center;
-  margin-left: 600px;
+  margin-left: 45%;
   margin-top: 20px;
   cursor: pointer;
 }
