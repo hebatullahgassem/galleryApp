@@ -1,0 +1,180 @@
+body{
+  background-color: lightyellow;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.inputContainer{
+  margin-left: 500px;
+  margin-top: 20px;
+}
+
+input{
+  border: 1px solid gray;
+  border-radius: 5px;
+  height: 30px;
+  width: 250px;
+  padding-left: 10px;
+}
+
+.addImage{
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: brown;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+}
+
+.deleteAll button{
+  background-color: black;
+  color: red;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 10px 20px;
+  text-align: center;
+  margin-left: 600px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  width: 60%;
+  margin-left: auto;
+  margin-right: 275px;
+  margin-top: 50px;
+}
+
+.imgContainer{
+  text-align: center;
+}
+
+.images{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.names{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.removeBtn{
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.modal{
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid red;
+}
+
+.modal-content{
+  background-color: #fff;
+  padding: 20px;
+}
+
+.modal-content p{
+  font-weight: bold;
+  color: red;
+}
+
+.btn-modal{
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modalBack{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  background-color:rgba(0,0,0,0.7);
+  display: none;
+}
+
+.slider{
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  border: 2px solid beige;
+  width: 300px;
+  height: 300px;
+}
+
+.close{
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border: none;
+  position: fixed;
+  top: 0;
+  left: 93.5%;
+  cursor: pointer;
+}
+
+.slider div{
+  position: fixed;
+  top: 45%;
+  width: 100%;
+}
+
+.previous, .next{
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  color: beige;
+}
+
+.next{
+  position: fixed;
+  left: 92%;
+}
+
+.slider-images{
+  width: 70%;
+  height: 70%;
+  position: fixed;
+  object-fit: cover;
+  top: 10%;
+  left: 15%;
+  border-radius: 5px;
+}
+
+.sliderImageName{
+  color: white;
+  text-transform: uppercase;
+  position: fixed;
+  top: 80%;
+  left: 38%;
+  font-weight: bold;
+}

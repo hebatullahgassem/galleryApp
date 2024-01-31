@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery App</title>
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="inputContainer">
+    <input type="url" placeholder="Enter Image Link Address">
+    <button class="addImage">Add Image</button>
+  </div>
+  <div class="deleteAll">
+    <button class="deleteAllBtn">Delete All!</button>
+  </div>
+
+  <div class="modalBack"></div>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <p>You are about to delete all images! Are you sure you want to do that?</p>
+      <button class="btn-modal" id="confirm-delete">Yes, Delete</button>
+      <button class="btn-modal" id="cancel-delete">Cancel</button>
+    </div>
+  </div>
+
+  <div class="container"></div>
+
+  <div class="slider">
+    <button class="close">x</button>
+    <div>
+      <button class="previous"><</button>
+      <button class="next">></button>
+    </div>
+  </div>
+</body>
+</html>
